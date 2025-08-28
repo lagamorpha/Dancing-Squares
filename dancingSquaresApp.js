@@ -2,22 +2,24 @@
 
 
 // Variable Block
-// const
+const blackBox = document.querySelector('.square');
 // const colorInput = document.querySelector('.square')[0];
 // const colorDemo = document.querySelector('li')[0];
 
-// colorInput.addEventListener('click', function () {
-//     const newColor = makeRandColor();
-//     colorDemo.style.backgroundColor = newColor;
-//     console.log('hello');
-// })
+// Basic Functions
+const makeRandColor = () => {
+    const r = Math.floor(Math.random() * 255);
+    const g = Math.floor(Math.random() * 255);
+    const b = Math.floor(Math.random() * 255);
+    return `rgb(${r}, ${g}, ${b})`;
+}
 
-// const makeRandColor = () => {
-//     const r = Math.floor(Math.random() * 255);
-//     const g = Math.floor(Math.random() * 255);
-//     const b = Math.floor(Math.random() * 255);
-//     return `rgb(${r}, ${g}, ${b})`;
-// }
+// blackBox Functions
+blackBox.addEventListener('click', function () {
+    const newColor = makeRandColor();
+    blackBox.style.backgroundColor = newColor;
+    console.log(`The Black Box is now ${newColor}`);
+});
 
 // const addInput = document.querySelector('#add');
 
