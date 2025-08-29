@@ -1,4 +1,4 @@
--Dancing Squares Game
+#Dancing Squares Game
 
 Use html, js and css to make an interactive space where random 'objects' are created with each click of the buttons
 
