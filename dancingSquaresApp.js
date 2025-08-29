@@ -3,15 +3,25 @@
 
 // Variable Block
 // const blackBox = document.querySelector('.square');
-const yellowBox = document.querySelector('.sensor');
+// const yellowBox = document.querySelector('.sensor');
 
 // Basic Functions
+function draw() {
+    const canvas = document.getElementById("canvas");
+    if (canvas.getContext) {
+        const ctx = canvas.getContext("2d");
+        ctx.strokeRect(10, 10, 500, 500);
+    }
+}
+
 const makeRandColor = () => {
     const r = Math.floor(Math.random() * 255);
     const g = Math.floor(Math.random() * 255);
     const b = Math.floor(Math.random() * 255);
     return `rgb(${r}, ${g}, ${b})`;
 }
+
+draw();
 
 // // blackBox Functions
 // blackBox.addEventListener('click', function () {
@@ -26,30 +36,30 @@ const makeRandColor = () => {
 // })
 
 // 'move the box' functions
-document.addEventListener(
-    "keydown",
-    (event) => {
-        const keyName = event.key;
-        let currentTop = parseInt(yellowBox.style.top);
-        let currentLeft = parseInt(yellowBox.style.left);
-        const moveAmount = 10;
+// document.addEventListener(
+//     "keydown",
+//     (event) => {
+//         const keyName = event.key;
+//         let currentTop = parseInt(yellowBox.style.top);
+//         let currentLeft = parseInt(yellowBox.style.left);
+//         const moveAmount = 10;
 
-        if (keyName === 'w') {
-            yellowBox.style.top = (currentTop + moveAmount) + 'px';
-            console.log('you moved forwards');
-        }
-        if (keyName === 'a') {
-            yellowBox.style.left = (currentLeft - moveAmount) + 'px';
-            console.log('you moved left');
-        }
-        if (keyName === 'd') {
-            yellowBox.style.left = (currentLeft + moveAmount) + 'px';
-            console.log('you moved right');
-        }
-        if (keyName === 's') {
-            yellowBox.style.top = (currentTop - moveAmount) + 'px';
-            console.log('you moved backwards');
-        }
-    },
-    false,
-);
+//         if (keyName === 'w') {
+//             yellowBox.style.top = (currentTop + moveAmount) + 'px';
+//             console.log('you moved forwards');
+//         }
+//         if (keyName === 'a') {
+//             yellowBox.style.left = (currentLeft - moveAmount) + 'px';
+//             console.log('you moved left');
+//         }
+//         if (keyName === 'd') {
+//             yellowBox.style.left = (currentLeft + moveAmount) + 'px';
+//             console.log('you moved right');
+//         }
+//         if (keyName === 's') {
+//             yellowBox.style.top = (currentTop - moveAmount) + 'px';
+//             console.log('you moved backwards');
+//         }
+//     },
+//     false,
+// );
