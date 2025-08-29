@@ -1,13 +1,17 @@
-#Dancing Squares Game
+# Dancing Squares Game
 
 Use html, js and css to make an interactive space where random 'objects' are created with each click of the buttons
 
--Update
+-Update i
 I'm now aiming to make a game where you move your box into a larger one that randomly changes place, size and color as you progress
+
+-Update ii
+I've begun to research into the canvasAPI as it seems to be a simple and flexible way to achieve my primary goal: move a box around the game screen to simulate a basic game board
+World objects and interactions to follow
 
 -How It's Made
 
-Tech used: HTML, CSS, JS
+Tech used: HTML, CSS, JS, CanvasAPI
 
 Planning to impliment a button to remove 'objects' as well
 
