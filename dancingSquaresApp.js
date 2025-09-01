@@ -6,11 +6,17 @@
 // const yellowBox = document.querySelector('.sensor');
 
 // Basic Functions
+// draw a rectangle
 function draw() {
     const canvas = document.getElementById("canvas");
     if (canvas.getContext) {
         const ctx = canvas.getContext("2d");
+
         ctx.strokeRect(10, 10, 500, 500);
+
+        ctx.beginPath();
+        ctx.arc(250, 250, 50, 0, Math.PI * 2, true);
+        ctx.stroke();
     }
 }
 
